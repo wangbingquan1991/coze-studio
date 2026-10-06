@@ -1,0 +1,28 @@
+{
+  "name": "dsh-coze-studio",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness bundle for installing and operating Coze Studio from DSH.",
+  "type": "module",
+  "main": "./dsh-plugin/index.js",
+  "files": ["dsh-plugin/"],
+  "keywords": ["dsh-plugin", "deepseek-harness", "coze-studio", "agent", "docker-compose"],
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh-plugin/cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "check": "node --check dsh-plugin/index.js"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "0.1.7-rc.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangbingquan1991/coze-studio.git"
+  },
+  "license": "Apache-2.0"
+}
